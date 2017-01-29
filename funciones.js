@@ -20,10 +20,14 @@
 		
  $(document).ready(function(e) {
    		
-		$("#kek").click(function send(){
+     
+     $("#kek").click(function send() {
 			
-			var mensaje = document.getElementById("msg").value;
-			var lugar = document.getElementById("panelChat");
+			//var mensaje = document.getElementById("msg").value;
+		    //var lugar = document.getElementById("panelChat");
+
+		    var answerButton1 = document.getElementById("answer1").value;
+		    var answerButton2 = document.getElementById("answer2").value;
 			/*var env = document.createElement('p'); 
 			env.className ='enviado';
 			env.innerHTML = mensaje;
@@ -31,13 +35,30 @@
 			var mybr = document.createElement('br');
 			lugar.append(mybr);
 			*/
-			var myDiv = document.createElement("div");
+		    /*
+            Código de ejemplo para insertar los demás elementos
+            var myDiv = document.createElement("div");
 			var mybr = document.createElement('br');
 			myDiv.className = 'enviado';
 			myDiv.innerHTML = mensaje;
 			lugar.append(mybr);
 			lugar.appendChild(myDiv);
+            */
 		});
+
+     $("#answer1").click(function sendMessage1() {
+         var lugar = document.getElementById("panelChat");
+         var answerButton1 = document.getElementById("answer1").value;
+         var answerButton2 = document.getElementById("answer2").value;
+
+         var myDiv = document.createElement("div");
+         var mybr = document.createElement('br');
+         myDiv.className = 'enviado';
+         myDiv.innerHTML = answerButton1;
+         lugar.append(mybr);
+         lugar.appendChild(myDiv);
+
+     });
 	
 });
 		
