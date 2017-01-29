@@ -59,6 +59,22 @@
          lugar.appendChild(myDiv);
 
      });
+	 
+	 function Respuesta(message) {
+         var lugar = document.getElementById("panelChat");
+         var myDiv = document.createElement("div");
+         var mybr = document.createElement('br');
+         switch (message) {
+             case 1: {
+                 lugar.appendChild(mybr);
+                 myDiv.className = 'recivido';
+                 myDiv.innerHTML = "Oc";
+                 lugar.appendChild(myDiv);
+                 lugar.appendChild(mybr);
+                 break;
+             }
+         }
+     }
 	
 });
 		
