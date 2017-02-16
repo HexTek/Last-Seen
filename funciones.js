@@ -1,44 +1,28 @@
-/*
-<div class="recivido">
-                	<p>Soy un mensaje</p>
-                </div>
-                <br>
-                <div class="enviado">
-                	<p>Soy un mensaje</p>
-                </div>
-                <br><br><br><br><br><br><br><br>
-                <div class="recivido">
-                	<p>Soy un mensaje</p>
-                </div>
-                <div class="enviado">
-                	<p>Soy un mensaje</p>
-                </div>
-            </div>
-*/
+    var textos;
+    var textosSeparados;
+    var newDiv;
+    var mensajeDentro;
 
-    	//Variable global del array
-		
- $(document).ready(function(e) {
-   		
-		$("#kek").click(function send(){
-			
-			var mensaje = document.getElementById("msg").value;
-			var lugar = document.getElementById("panelChat");
-			/*var env = document.createElement('p'); 
-			env.className ='enviado';
-			env.innerHTML = mensaje;
-			lugar.append(env);
-			var mybr = document.createElement('br');
-			lugar.append(mybr);
-			*/
-			var myDiv = document.createElement("div");
-			var mybr = document.createElement('br');
-			myDiv.className = 'enviado';
-			myDiv.innerHTML = mensaje;
-			lugar.append(mybr);
-			lugar.appendChild(myDiv);
-		});
-	
+$(document).ready(function (e){
+   alert("welcome") ;
+    var client = new XHLHttpRequest();
+    client.open('GET','/example.txt');
+    client.onreadystatechange = function(){
+    textos = client.responseText;
+    textosSeparados= textos.split(">");
+    }
 });
-		
+
+$("#answer1").click(function send(){
+    //var divMensajes = document.getElementById("panelChat");
+    //var textoDelMensaje = textosSeparados[1];
+    alert("hola");
+    //newDiv = document.createElement('div');
+    //newDiv.className = 'mensaje';
+    //newDiv.id = 'enviado';
+    //mensajeDentro = document.createTextNode(textoDelMensaje);
+    //newDiv.appendChild(mensajeDentro);
+    //divMensajes.appendChild(newDiv);
+    //client.send();
+});	
 		
