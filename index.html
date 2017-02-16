@@ -6,51 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
 	<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+    	<link href="style.css" rel="stylesheet" type="text/css"/>
 	<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
 	<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
-    <script src="js/funciones.js" type="text/javascript"></script>
+    <script src="funciones.js" type="text/javascript"></script>
 
-    <style>
-    	.chatBG{
-			}
-		.recivido{
-			position:relative;
-			display:block;
-			border-radius: 0 20px 20px 20px;
-			float:left;
-			padding:3px;
-			width:auto;
-			height:auto;
-			background-color:#2F77D8;
-			}
-		p {
-			width:auto;
-			color:#FFFFFF;
-			text-align:justify;
-			padding:10px;
-			}
-		.enviado{
-			/*margin-top:50px;*/
-			position:relative;
-			border-radius: 20px 0 20px 20px;
-			float:static;
-			padding:8px;
-			width:auto;
-			height:auto;
-			background-color:#4080ff;
-			color:white;
-			text-align:right
-			}
-		a{
-			text-align:center;
-			}
-			/*
-			*********Añade lista
-			*/
-    </style>
 </head>
 <body>
-	<div data-role="page" id="home" data-transition="pop">
+	<div data-role="page" id="home" data-transition="pop" data-theme="c">
 		<div data-role="header">
 			<h3>Whats Up!</h3>
 		</div>
@@ -119,14 +82,15 @@
         
         <div data-role="content" class="chatBG">
         	<div class="panelChat" id="panelChat">
+                <!-- Aquí se irán agregando los mensajes-->
 			</div>	
         </div>
         
         <div data-role="footer" data-position="fixed">
         	<div data-role="navbar">
                 <ul>
-                    <li><input type="text" id="msg" placeholder="Escribe un mensaje" value=""/></li>
-                    <li><div data-role="button" id="kek">Enviar</div></li>
+                    <li><input type="button" value="Opcion1" id="answer1"></li>
+                    <li><input type="button" value="Opcion2" id="answer2"></li>
                 </ul>
             </div>
         </div>
